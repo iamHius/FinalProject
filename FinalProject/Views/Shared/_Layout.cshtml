@@ -3,16 +3,33 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - FinalProject</title>
+    <title>@ViewData["Title"] - SonaBookings</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/FinalProject.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SonaBookings.styles.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="/template/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/template/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/template/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="/template/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="/template/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/template/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="/template/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="/template/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="/template/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/template/css/style.css" type="text/css">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FinalProject</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SonaBookings</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -27,23 +44,104 @@
                         </li>
                     </ul>
                 </div>
+                <partial name="_LoginPartial" />
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
+    @RenderBody()
+
+    <div class="mb-xl-5">
+        <span class="pt-xl-5"></span>
+    </div>
+    @* <footer class="border-top footer text-muted">
+    <div class="container">
+    &copy; 2024 - SonaBookings - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </div>
+    </footer> *@
+
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
         <div class="container">
-            &copy; 2024 - FinalProject - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="footer-text">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="ft-about">
+                            <div class="logo">
+                                <a href="#">
+                                    <img src="img/footer-logo.png" alt="">
+                                </a>
+                            </div>
+                            <p>We inspire and reach millions of travelers<br /> across 90 local websites</p>
+                            <div class="fa-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-tripadvisor"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="ft-contact">
+                            <h6>Contact Us</h6>
+                            <ul>
+                                <li>(12) 345 67890</li>
+                                <li>info.colorlib@gmail.com</li>
+                                <li>856 Cordia Extension Apt. 356, Lake, United State</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="ft-newslatter">
+                            <h6>New latest</h6>
+                            <p>Get the latest updates and offers.</p>
+                            <form action="#" class="fn-form">
+                                <input type="text" placeholder="Email">
+                                <button type="submit"><i class="fa fa-send"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-option">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <ul>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Terms of use</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Environmental Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="co-text">
+                            <p>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
+    <!-- Footer Section End -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    <!-- Js Plugins -->
+    <script src="/template/js/jquery-3.3.1.min.js"></script>
+    <script src="/template/js/bootstrap.min.js"></script>
+    <script src="/template/js/jquery.magnific-popup.min.js"></script>
+    <script src="/template/js/jquery.nice-select.min.js"></script>
+    <script src="/template/js/jquery-ui.min.js"></script>
+    <script src="/template/js/jquery.slicknav.js"></script>
+    <script src="/template/js/owl.carousel.min.js"></script>
+    <script src="/template/js/main.js"></script>
 </body>
 </html>
